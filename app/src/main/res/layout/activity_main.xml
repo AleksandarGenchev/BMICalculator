@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/inpWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please input your Weight in the field"
+        android:layout_marginTop="45dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:padding="10dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/editWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Weight (in kg)"
+        android:layout_below="@id/inpWeight"/>
+
+    <TextView
+        android:id="@+id/inpHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please input your Height in the field"
+        android:layout_marginTop="45dp"
+        android:textSize="18sp"
+        android:layout_below="@id/editWeight"/>
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/inpHeight"
+        android:inputType="numberDecimal"
+        android:hint="Height (in cm)" />
+    <TextView
+        android:id="@+id/tvYourBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your BMI is:"
+        android:layout_marginTop="70dp"
+        android:textSize="18sp"
+        android:layout_below="@id/editHeight"/>
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvYourBmi"/>
+    <TextView
+        android:id="@+id/tvBMIStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_below="@id/tvResult"/>
+    <TextView
+        android:id="@+id/tvAdvice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@id/tvBMIStatus"/>
+
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAdvice"
+        android:text="Calculate BMI"
+        android:paddingHorizontal="70dp"/>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalculate"
+        android:text="Check History"
+        android:paddingHorizontal="70dp"/>
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
